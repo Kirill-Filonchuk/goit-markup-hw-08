@@ -1,0 +1,85 @@
+.particular {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+  
+  .particular-list {
+    display: flex;
+  
+    .title {
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 1.143;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      color: var(--second-text-color);
+    
+      margin-top: 30px;
+      margin-bottom: 10px;
+    }
+
+    .text {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 1.714;
+      letter-spacing: 0.03em;
+      min-height: 75px;
+    }
+}
+  
+  .particular-list-items {
+    width: 270px;
+    
+    &:not(:last-child) {
+    margin-right: 30px;
+  }
+    
+    &::before {
+    content: '';
+    display: block;
+    background-color: var(--second-bg-color);
+    height: 120px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
+  }
+  
+
+// $icons: "antenna", "clock", "diagram", "astronaut";
+
+// @each $tempName in $icons {
+//   .icon-#{$tempName}::before {
+//     background-image: url('../images/#{$tempName}.svg');
+//     background-size: 70px 70px;
+//   }
+// }
+
+$icons: (
+  "antenna": url("../images/antenna.svg"),
+  "clock": url("../images/clock.svg"),
+  "diagram": url("../images/diagram.svg"),
+  "astronaut": url("../images/astronaut.svg"),
+);
+
+@include icon-list($icons, ".icon");
+
+  // .icon-antenna::before {
+  //   background-image: url('../images/antenna.svg');
+  //   background-size: 70px 70px;
+  // }
+  
+  // .icon-clock::before {
+  //   background-image: url('../images/clock.svg');
+  //   background-size: 70px 70px;
+  // }
+  
+  // .icon-diagram::before {
+  //   background-image: url('../images/diagram.svg');
+  //   background-size: 70px 70px;
+  // }
+  
+  // .icon-astronaut::before {
+  //   background-image: url('../images/astronaut.svg');
+  //   background-size: 70px 70px;
+  // }
