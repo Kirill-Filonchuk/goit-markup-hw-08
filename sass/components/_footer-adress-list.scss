@@ -156,7 +156,14 @@
 /////////////////////////
 
 @media screen and (min-width: 1200px) {
-  address-list {
+  .footer-logo .f-logo{
+   
+    margin-bottom: 20px;
+    display: flex;
+   
+    
+   }
+  .address-list {
     // display: flex;
     // flex-direction: column;
 

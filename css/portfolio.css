@@ -578,13 +578,17 @@ button {
 }
 
 @media screen and (min-width: 1200px) {
-  address-list {
+  .footer-logo .f-logo {
+    margin-bottom: 20px;
+    display: flex;
+  }
+  .address-list {
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
     flex-direction: column;
   }
-  address-list .items:not(:last-child) {
+  .address-list .items:not(:last-child) {
     margin-bottom: 9px;
   }
   .address-futer {
