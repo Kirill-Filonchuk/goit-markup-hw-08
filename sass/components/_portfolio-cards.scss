@@ -1,11 +1,93 @@
-%df_aic {
-  display: flex;
-    align-items: center;
+@media screen and (max-width: 767px) {
+  .portfolio {
+    
+      &-list {
+      
+            &-item:not(:last-child) {
+            
+    margin-bottom: 30px;
+            
+                    }
+      
+              }
+            }   
 }
 
-%df_fw {
+
+.portfolio {
+
+  &-list {
+   
   display: flex;
   flex-wrap: wrap;
+
+  margin-top: calc(-1 * var(--card-set-gap));
+  margin-left: calc(-1 * var(--card-set-gap));
+      
+            &-item {
+        flex-basis: calc(100% / 2 - var(--card-set-gap));
+
+        margin-left: var(--card-set-gap);
+        margin-top: var(--card-set-gap);
+                }
+  
+          }
+
+  &-card-box {
+    background: var(--primary-bg-color);
+    border-left: 1px solid var(--cards-portfolio-color);
+    border-bottom: 1px solid var(--cards-portfolio-color);
+    border-right: 1px solid var(--cards-portfolio-color);
+
+    box-sizing: border-box;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-right: 24px;
+    padding-left: 24px;
+              }
+}
+
+
+/* portfolio list develop desing */
+
+.portfolio-list-item {
+
+  .title {
+      font-weight: 700;
+      @include line-height-calc(18,36);
+      
+      letter-spacing: 0.06em;
+      color: var(--second-text-color);
+    
+      margin-bottom: 4px;
+  }
+  .text {
+      font-weight: 400;
+      @include line-height-calc(16,30);
+     
+      letter-spacing: 0.03em;
+      color: var(--primary-text-color);
+  }
+
+}
+
+@media screen and (min-width: 768px) {
+  
+
+  %df_aic {
+    display: flex;
+      align-items: center;
+  }
+  
+  %df_fw {
+    display: flex;
+    flex-wrap: wrap;
+  }
+   
+.tekhn-box {
+  padding-bottom: 56px;
+}
+
 }
 
 
@@ -34,19 +116,19 @@
   
   .text-overlay {
     position: absolute;
-    /* top: 0; not nice */
+    
     bottom: 0;
     left: 0;
     background-color: var(--portfolio-overlay-bg);
     width: 100%;
     height: 100%;
   
-    padding: 63px 24px;
-  
+   
+    padding: 77px 24px;
+
     font-weight: 400;
     @include line-height-calc(18,28);
-    // font-size: 18px;
-    // line-height: 1.556;
+  
     letter-spacing: 0.03em;
     color: var(--primary-bg-color);
   
@@ -60,64 +142,43 @@
     
   }
     
-  /* transform: translatey(0); 
-  END create overlay */
-  
-  .portfolio {
 
-    &-list {
-      @extend %df_fw;
-    // display: flex;
-    // flex-wrap: wrap;
-  
-    margin-top: calc(-1 * var(--card-set-gap));
-    margin-left: calc(-1 * var(--card-set-gap));
-        
-          &-item {
-          flex-basis: calc(100% / 3 - var(--card-set-gap));
+  @media screen and (min-width: 1200px) {
 
-          margin-left: var(--card-set-gap);
-          margin-top: var(--card-set-gap);
-                  }
+    %df_aic {
+      display: flex;
+        align-items: center;
+    }
     
-            }
-
-    &-card-box {
-      background: var(--primary-bg-color);
-      border-left: 1px solid var(--cards-portfolio-color);
-      border-bottom: 1px solid var(--cards-portfolio-color);
-      border-right: 1px solid var(--cards-portfolio-color);
-
-      box-sizing: border-box;
-      padding-top: 20px;
-      padding-bottom: 20px;
-      padding-right: 24px;
-      padding-left: 24px;
-                }
-}
-
-
-/* portfolio list develop desing */
-
-.portfolio-list-item {
-  
-    .title {
-        font-weight: 700;
-        @include line-height-calc(18,36);
-        // font-size: 18px;
-        // line-height: 2;
-        letter-spacing: 0.06em;
-        color: var(--second-text-color);
+    %df_fw {
+      display: flex;
+      flex-wrap: wrap;
+    }
+     
+    .text-overlay {
+      padding: 63px 24px;
+  }
+  .portfolio {
+    
+      &-list {
+        display: flex;
+      flex-wrap: wrap;
+     
+      margin-top: calc(-1 * var(--card-set-gap));
+      margin-left: calc(-1 * var(--card-set-gap));
+          
+                &-item {
+            flex-basis: calc(100% / 3 - var(--card-set-gap));
+    
+            margin-left: var(--card-set-gap);
+            margin-top: var(--card-set-gap);
+                    }
       
-        margin-bottom: 4px;
-    }
-    .text {
-        font-weight: 400;
-        @include line-height-calc(16,30);
-        // font-size: 16px;
-        // line-height: 1.875;
-        letter-spacing: 0.03em;
-        color: var(--primary-text-color);
-    }
-
+              }
 }
+
+.tekhn-box {
+  padding-bottom: 20px;
+}
+  }
+ 

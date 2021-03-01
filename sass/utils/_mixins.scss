@@ -29,10 +29,10 @@
     justify-content: $jc;
     align-items: $ai;
     flex-direction: $fd;
-  }
+}
 
   
-  @mixin icon-list($list, $selector){
+@mixin icon-list($list, $selector){
     #{$selector} {
         @each $name, $path in $list {
           &-#{$name}::before {
@@ -41,5 +41,19 @@
             }
          }
       }
-    }
+}
    
+@mixin overlay-hero ($mw, $h, $bi) {
+      max-width: $mw;
+      height: $h;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+        ),
+        // url('../images/hero/#{$bi}');
+        url('../images/hero/#{$bi}');
+      margin: auto;
+}
+      

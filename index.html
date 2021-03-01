@@ -26,17 +26,22 @@
                 </ul>
             
             </nav>
+            <button type="button" class="navigation__btn">
+                <svg class="navigation__btn icon_btn" >
+                    <use href="./images/sprite.svg#brg_menu"></use>
+                </svg>
+            </button>
             
-            <!--our contacts-->
+            <!--our contacts icon-brg_menu  brg_close-->
             <ul class="header-contact list">
-                <li class="items">
+                <li class="items__mail">
                     <a href="mailto:info@devstudio.com" class="header-contact-mail">
                         <svg class="contact-icon" width="16px" height="12px">
                             <use href="./images/sprite.svg#envelope"></use>
                         </svg>
                         <span lang="en">info@devstudio.com</span></a>
                 </li>
-                <li class="items">
+                <li class="items__tel">
                     <a href="tel:+380961111111" class="header-contact-tel">
                         <svg class="contact-icon" width="10px" height="16px">
                             <use href="./images/sprite.svg#smartphone"></use>
@@ -53,7 +58,7 @@
         <!--Hero-->
         
         <section class="hero overlay">
-            <div class="container">
+            <div class="container ">
                 <h1 class="hero-title">Эффективные решения для вашего бизнеса</h1>
                 <button data-modal-open type="button" class="hero-button">Заказать услугу</button>
             </div>
@@ -101,18 +106,23 @@
         </section>
 
         <!-- ONLY DESKTOP What we are doing, and what we can.-->
+
         <section class="practice">
             <div class="container">
                 <h2 class="practice-title">Чем мы занимаемся</h2>
                 <ul class="practice-list list">
                     <li class="practice-list-items">
                             <div class="practice-thumb">
-                                
-                                <!-- <img src="./images/img_wd_1.jpg" alt="Проектирование алгоритмов ПО" width="370"> -->
+                               
                                 
                                 <picture>
-                                    <source srcset="./images/wd/wd-1.webp 1x, ./images/wd/wd-1@2x.webp 2x" media="(min-width: 1200px)" type="image/webp">
-                                    <source srcset="./images/wd/wd-1.jpg 1x, ./images/wd/wd-1@2x.jpg 2x" media="(min-width: 1200px)">
+                                    <source srcset="./images/wd/wd-1.webp 1x, 
+                                                    ./images/wd/wd-1@2x.webp 2x" 
+                                                    media="(min-width: 1200px)" 
+                                                    type="image/webp">
+                                    <source srcset="./images/wd/wd-1.jpg 1x, 
+                                                    ./images/wd/wd-1@2x.jpg 2x" 
+                                                    media="(min-width: 1200px)">
                                         <img src="./images/wd/wd-1.jpg" alt="Проектирование алгоритмов ПО" >
                                 </picture> 
 
@@ -123,11 +133,11 @@
                     </li>
                     <li class="practice-list-items">
                             <div class="practice-thumb">
-                                <!-- <img src="./images/img_wd_2.jpg" alt="Разработка дизайна сайтов для мобильных устройств" width="370"> -->
+                                
 
                                 <picture>
-                                    <source srcset=".images/wd/wd-2.webp 1x, .images/wd/wd-2@2x.webp 2x" media="(min-width:1200px)" type="image/webp">
-                                    <source srcset=".images/wd/wd-2.jpg 1x, .images/wd/wd-2@2x.jpg 2x" media="(min-width:1200px)">
+                                    <source srcset="../images/wd/wd-2.webp 1x, ../images/wd/wd-2@2x.webp 2x" media="(min-width:1200px)" type="image/webp">
+                                    <source srcset="../images/wd/wd-2.jpg 1x, ../images/wd/wd-2@2x.jpg 2x" media="(min-width:1200px)">
                                         <img src="./images/wd/wd-2.jpg" alt="Разработка дизайна сайтов для мобильных устройств">
                                 </picture>
 
@@ -140,11 +150,11 @@
                     </li>
                     <li class="practice-list-items">
                             <div class="practice-thumb">
-                                <!-- <img src="./images/img_wd_3.jpg" alt="Колористика цветового дизайна" width="370"> -->
+                              
 
                                 <picture>
-                                    <source srcset=".images/wd/wd-3.webp 1x, .images/wd/wd-3@2x.webp 2x" media="(min-width:1200px)" type="image/webp">
-                                    <source srcset=".images/wd/wd-3.jpg 1x, .images/wd/wd-3@2x.jpg 2x" media="(min-width:1200px)">
+                                    <source srcset="../images/wd/wd-3.webp 1x, ../images/wd/wd-3@2x.webp 2x" media="(min-width:1200px)" type="image/webp">
+                                    <source srcset="../images/wd/wd-3.jpg 1x, ../images/wd/wd-3@2x.jpg 2x" media="(min-width:1200px)">
                                         <img src="./images//wd/wd-3.jpg" alt="Колористика цветового дизайна">
                                 </picture>
 
@@ -157,15 +167,44 @@
                     </li>
                 </ul>
             </div>
-        </section>
+        </section> 
 
         <!--Our team-->
         <section class="team">
             <div class="container">
                 <h2 class="team-title">Наша команда</h2>
                 <ul class="team-list list">
-                    <li class="team-card"> 
-                         <img class="team-member" src="./images/img_t_id.jpg" alt="Фотография Игоря Демьяненко" width="270">
+                    <li class="team-card">                         
+                       
+    <!-- Igor  -->
+                        <picture>
+                            <source srcset="../images/igor/ig-desk.webp 1x, 
+                                            ../images/igor/ig-desk@2x.webp 2x"
+                                             media="(min-width:1200px)" 
+                                             type="image/webp">                
+                                <source srcset="../images/igor/ig-desk.jpg 1x, 
+                                                ../images/igor/ig-desk@2x.jpg 2x" 
+                                            media="(min-width:1200px)">
+                                                       
+                            <source srcset="../images/igor/ig-tabl.webp 1x, 
+                                            ../images/igor/ig-tabl@2x.webp 2x"
+                                              media="(min-width:768px)" 
+                                              type="image/webp">
+                                <source srcset="../images/igor/ig-tabl.jpg 1x, 
+                                                ../images/igor/ig-tabl@2x.jpg 2x" 
+                                            media="(min-width:768px)">
+
+                            <source srcset="../images/igor/ig-mob.webp 1x, 
+                                            ../images/igor/ig-mob@2x.webp 2x"
+                                             media="(max-width:767px)" 
+                                             type="image/webp">
+                                <source srcset="../images/igor/ig-mob.jpg 1x, 
+                                                ../images/igor/ig-mob@2x.jpg 2x" 
+                                             media="(max-width:767px)">     
+                            
+                                <img class="team-member" src="./images/igor/ig-mob.jpg" alt="Фотография Игоря Демьяненко">
+                        </picture>
+                        
                         <div class="team-member-box">
                             <h3 class="team-list-title">Игорь Демьяненко</h3>
                             <p class="team-list-text" lang="en">Product Designer</p>
@@ -201,7 +240,36 @@
                         
                     </li>
                     <li class="team-card">
-                        <img class="team-member" src="./images/img_t_or.jpg" alt="Фотография Ольги Репиной" width="270">
+                      
+<!-- Olga  -->
+                        <picture>
+                            <source srcset="../images/olga/ol-desk.webp 1x, 
+                                            ../images/olga/ol-desk@2x.webp 2x"
+                                            media="(min-width:1200px)" 
+                                            type="image/webp">                
+                                <source srcset="../images/olga/ol-desk.jpg 1x, 
+                                                ../images/olga/ol-desk@2x.jpg 2x" 
+                                            media="(min-width:1200px)">
+                            
+                            <source srcset="../images/olga/ol-tabl.webp 1x, 
+                                            ../images/olga/ol-tabl@2x.webp 2x"
+                                              media="(min-width:768px)" 
+                                              type="image/webp">
+                                <source srcset="../images/olga/ol-tabl.jpg 1x, 
+                                                ../images/olga/ol-tabl@2x.jpg 2x" 
+                                            media="(min-width:768px)">
+
+                       
+                                <source srcset="../images/olga/ol-mob.webp 1x, 
+                                            ../images/olga/ol-mob@2x.webp 2x"
+                                             media="(max-width:767px)" 
+                                             type="image/webp">
+                                     <source srcset="../images/olga/ol-mob.jpg 1x, 
+                                                ../images/olga/ol-mob@2x.jpg 2x" 
+                                             media="(max-width:767px)">    
+                                <img class="team-member" src="./images/olga/ol-mob.jpg" alt="Фотография Ольги Репиной">
+                        </picture>
+
                         <div class="team-member-box">
                             <h3 class="team-list-title">Ольга Репина</h3>
                             <p class="team-list-text" lang="en">Frontend Developer</p>
@@ -235,7 +303,40 @@
                        
                     </li>
                     <li class="team-card">
-                        <img class="team-member" src="images/img_t_nt.jpg" alt="Фотография Николая Тарасова" width="270">
+                       
+
+<!-- Nikol  -->
+                        <picture>
+                           <source srcset="../images/nikolay/nik-desk.webp 1x, 
+                                            ../images/nikolay/nik-desk@2x.webp 2x"
+                                            media="(min-width:1200px)" 
+                                            type="image/webp">                
+                                <source srcset="../images/nikolay/nik-desk.jpg 1x, 
+                                                ../images/nikolay/nik-desk@2x.jpg 2x" 
+                                            media="(min-width:1200px)">
+
+                            
+                            <source srcset="../images/nikolay/nik-tabl.webp 1x, 
+                                            ../images/nikolay/nik-tabl@2x.webp 2x"
+                                            media="(min-width:768px)" 
+                                            type="image/webp">
+                                <source srcset="../images/nikolay/nik-tabl.jpg 1x, 
+                                                ../images/nikolay/nik-tabl@2x.jpg 2x" 
+                                            media="(min-width:768px)">
+
+
+                            <source srcset="../images/nikolay/nik-mob.webp 1x, 
+                                            ../images/nikolay/nik-mob@2x.webp 2x"
+                                            media="(max-width:767px)" 
+                                            type="image/webp">
+                                <source srcset="../images/nikolay/nik-mob.jpg 1x, 
+                                                ../images/nikolay/nik-mob@2x.jpg 2x" 
+                                            media="(max-width:767px)"> 
+
+                                <img class="team-member" src="./images/nikolay/nik-mob.jpg" alt="Фотография Николая Тарасова">
+                        </picture>
+
+
                         <div class="team-member-box">
                             <h3 class="team-list-title">Николай Тарасов</h3>
                             <p class="team-list-text" lang="en">Marketing</p>
@@ -269,7 +370,38 @@
                        
                     </li>
                     <li class="team-card">
-                        <img class="team-member" src="images/img_t_me.jpg" alt="Фотография Михаила Ермакова" width="270">
+                   
+
+<!-- Mikhail  -->
+                        <picture>
+                            <source srcset="../images/mikhail/mikh-desk.webp 1x, 
+                                            ../images/mikhail/mikh-desk@2x.webp 2x"
+                                            media="(min-width:1200px)" 
+                                            type="image/webp">                
+                                <source srcset="../images/mikhail/mikh-desk.jpg 1x, 
+                                                ../images/mikhail/mikh-desk@2x.jpg 2x" 
+                                            media="(min-width:1200px)">
+                            
+                            <source srcset="../images/mikhail/mikh-tabl.webp 1x, 
+                                            ../images/mikhail/mikh-tabl@2x.webp 2x"
+                                            media="(min-width:768px)" 
+                                            type="image/webp">
+                                <source srcset="../images/mikhail/mikh-tabl.jpg 1x, 
+                                                ../images/mikhail/mikh-tabl@2x.jpg 2x" 
+                                            media="(min-width:768px)">
+
+                                            
+                            <source srcset="../images/mikhail/mikh-mob.webp 1x, 
+                                            ../images/mikhail/mikh-mob@2x.webp 2x"
+                                            media="(max-width:767px)" 
+                                            type="image/webp">
+                                <source srcset="../images/mikhail/mikh-mob.jpg 1x, 
+                                                ../images/mikhail/mikh-mob@2x.jpg 2x" 
+                                            media="(max-width:767px)"> 
+                         
+                                <img class="team-member" src="../images/mikhail/mikh-mob.jpg" alt="Фотография Михаила Ермакова">
+                        </picture>
+
                         <div class="team-member-box">
                             <h3 class="team-list-title">Михаил Ермаков</h3>
                             <p class="team-list-text" lang="en">UI Designer</p>
@@ -357,20 +489,20 @@
                 </ul>
             </div>
         </section>
-    </main>
+    </main> 
 
 <!--Footer same in other pages-->
-    <footer class="footer">
+<footer class="footer">
       <div class="container">
         <div class="footer-section">
 
             <div class="footer-logo-adress">
                 <div class="footer-logo">
-                    <a href="./index.html" class="logo" lang="en">Web<span
+                    <a href="./index.html" class="logo f-logo" lang="en">Web<span
                                 class="logo-studio-color-footer">Studio</span></a>
                 </div>
 
-                <!--Our address and our contacts-->
+                
                 <address class="address-futer">
 
                     <ul class="address-list list">
@@ -431,9 +563,9 @@
       </div>
     </footer>
 
-    <div class="backdrop is-hidden" data-modal>
-
 <!-- =========  Modal Form =========  -->
+
+<!-- <div class="backdrop is-hidden" data-modal></div>
 
         <div class="modal">
             <h2 class="modal-title">Оставьте свои данные, мы вам перезвоним</h2>
@@ -489,8 +621,11 @@
 
         </div>
 
-    </div>
+    </div> -->
+
+
+<!-- 
 <script src="./js/modal.js"></script>
-<script src="./js/mobile-menu.js"></script>
+<script src="./js/mobile-menu.js"></script> -->
 </body>
 </html>

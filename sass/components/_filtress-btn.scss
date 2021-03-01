@@ -1,12 +1,14 @@
 .filter-list {
-  @include d_flex(center);
- 
-  margin-bottom: 50px;
+  display: inline-flex;
+    
+    flex-wrap: wrap;
+   
+  margin-bottom: 40px;
 
     &-item:not(:last-child) {
       margin-right: 8px;
     }
-}
+} 
   
   .filter-list-item {
   
@@ -20,8 +22,7 @@
         font-weight: 500;
 
         @include line-height-calc(16, 26);
-        // font-size: 16px;
-        // line-height: 1.625;
+        
         text-align: center;
         letter-spacing: 0.03em;
         color: var(--second-text-color);
@@ -49,4 +50,22 @@
   0px 2px 2px rgba(0, 0, 0, 0.12);
   border-radius: 4px;
   }
+}
+
+@media screen and (min-width: 768px) {
+  .filter-list {
+    display: flex;
+    justify-content: center;
+   
+    flex-wrap: nowrap; 
+    margin-bottom: 30px;
+}
+}
+
+@media screen and (min-width: 1200px) {
+
+.filter-list {
+  @include d_flex(center);
+margin-bottom: 50px;
+}
 }

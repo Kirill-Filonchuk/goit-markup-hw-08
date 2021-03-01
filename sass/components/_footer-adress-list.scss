@@ -1,7 +1,162 @@
 
-// @import "../utils/mixins";
+@media screen and (max-width: 767px) {
+.footer-logo {
+  text-align: center;
+  margin-bottom: 20px;
+  
+ }
+ .address-list {
+  text-align: center;
 
-.address-list {
+  .items:not(:last-child) {
+          margin-bottom: 9px;
+        }
+ }
+
+ .address-futer {
+  text-decoration: none;
+  font-style: normal;
+
+  margin-bottom: 60px;
+}
+
+.address-office {
+  font-weight: 400;
+  @include line-height-calc(14, 24);
+  
+  letter-spacing: 0.03em;
+  color: var(--primary-bg-color);
+  text-decoration: inherit;
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus
+  {
+    color: var(--accent-color);
+  }
+}
+
+.address-mail,
+.adress-tel {
+  font-weight: 400;
+  @include line-height-calc(14, 24);
+ 
+  letter-spacing: 0.03em;
+  text-decoration: inherit;
+  color: var(--footer-rare-text-color);
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus
+    {
+      color: var(--accent-color);
+    }
+
+}
+
+.footer-call {
+  display: block;
+ 
+  font-weight: 700;
+  @include line-height-calc(14, 16);
+ 
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  color: var(--primary-bg-color);
+
+  margin-bottom: 20px;
+}
+
+}
+
+///////////////////////////////////////////// 
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .footer-logo .f-logo{
+    text-align: center;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+
+    margin-right: 0;
+    margin-top: 0;
+    
+   }
+   .address-list {
+    text-align: center;
+    width: 232px;
+  
+    .items:not(:last-child) {
+            margin-bottom: 9px;
+          }
+   }
+  
+   .address-futer {
+    text-decoration: none;
+    font-style: normal;
+  
+    margin-bottom: 60px;
+  }
+  
+  .address-office {
+    font-weight: 400;
+    @include line-height-calc(14, 24);
+    
+    letter-spacing: 0.03em;
+    color: var(--primary-bg-color);
+    text-decoration: inherit;
+  
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  
+    &:hover,
+    &:focus
+    {
+      color: var(--accent-color);
+    }
+  }
+  
+  .address-mail,
+  .adress-tel {
+    font-weight: 400;
+    @include line-height-calc(14, 24);
+   
+    letter-spacing: 0.03em;
+    text-decoration: inherit;
+    color: var(--footer-rare-text-color);
+  
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  
+      &:hover,
+      &:focus
+      {
+        color: var(--accent-color);
+      }
+  
+  }
+  
+  .footer-call {
+    display: block;
+   
+    font-weight: 700;
+    @include line-height-calc(14, 16);
+   
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+  
+    color: var(--primary-bg-color);
+  
+    margin-bottom: 20px;
+  }
+  
+}
+
+/////////////////////////
+
+@media screen and (min-width: 1200px) {
+  address-list {
     // display: flex;
     // flex-direction: column;
 
@@ -23,8 +178,7 @@
   .address-office {
     font-weight: 400;
     @include line-height-calc(14, 24);
-    // font-size: 14px;
-    // line-height: 1.714;
+   
     letter-spacing: 0.03em;
     color: var(--primary-bg-color);
     text-decoration: inherit;
@@ -44,8 +198,7 @@
   .adress-tel {
     font-weight: 400;
     @include line-height-calc(14, 24);
-    // font-size: 14px;
-    // line-height: 1.714;
+    
     letter-spacing: 0.03em;
     text-decoration: inherit;
     color: var(--footer-rare-text-color);
@@ -60,14 +213,6 @@
 
   }
   
-  // .address-office:hover,
-  // .address-office:focus,
-  // .address-mail:hover,
-  // .address-mail:focus,
-  // .adress-tel:hover,
-  // .adress-tel:focus {
-  //   color: var(--accent-color);
-  // }
   
   .footer-section {
     display: flex;
@@ -82,8 +227,7 @@
   .footer-call {
     font-weight: 700;
     @include line-height-calc(14, 16);
-    // font-size: 14px;
-    // line-height: 1.143;
+   
     letter-spacing: 0.03em;
     text-transform: uppercase;
   
@@ -95,3 +239,33 @@
   .footer-logo-adress {
     margin-right: 70px;
   }
+}
+
+
+// .footer-logo {
+//   margin-bottom: 20px;
+//  }
+
+
+// .address-list {
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
+
+    
+//       // @include flex($prop: display, $fd: column);
+      
+
+//     .items:not(:last-child) {
+//       margin-bottom: 9px;
+//     }
+
+//   } 
+   
+  
+
+  
+  // decktop
+  // .footer-logo-adress {
+  //   margin-right: 70px;
+  // }
