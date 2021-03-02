@@ -26,7 +26,7 @@
                 </ul>
             
             </nav>
-            <button type="button" class="navigation__btn">
+            <button type="button" class="navigation__btn" data-menu-button>
                 <svg class="navigation__btn icon_btn" >
                     <use href="./images/sprite.svg#brg_menu"></use>
                 </svg>
@@ -51,6 +51,56 @@
                
             </ul>
         </div>
+
+<!--Mobile menu-->
+
+<div class="mobile__menu" data-menu>
+    <button class="mobile__menu__btn" type="button" data-menu-close>
+        <svg class="menu__btn__icon" width="40px" height="40px">
+            <use href="./images/sprite.svg#icon-brg_menu"></use>
+        </svg>
+    </button>
+
+    <ul class="mobile__menu__nav list">
+        <li class="nav__item"><a class="nav__link link--current" href="./index.html">Студия</a></li>
+        <li class="nav__item"><a class="nav__link" href="./portfolio.html">Портфолио</a></li>
+        <li class="nav__item"><a class="nav__link" href="#">Контакты</a></li>
+    </ul>
+
+    <ul class="mobile__menu__contact list">
+        <li class="menu__contact__mail">
+            <a href="mailto:info@devstudio.com" class="contact__mail__link">
+                
+                <span lang="en">info@devstudio.com</span></a>
+        </li>
+        <li class="items__tel">
+            <a href="tel:+380961111111" class="contact__tel__link">
+                
+                +38 096 111 11 11</a>
+        </li>
+    </ul>
+
+    <ul class="mobile__social__list list">
+        <li class="mobile__social__items"><a class="footer-social-list-link" href="#">
+                
+            </a>
+        </li>
+        <li class="mobile__social__items"><a class="footer-social-list-link" href="#">
+               
+            </a>
+        </li>
+        <li class="mobile__social__items"><a class="footer-social-list-link" href="#">
+               
+            </a>
+        </li>
+        <li class="mobile__social__items"><a class="footer-social-list-link" href="#">
+               
+            </a>
+        </li>
+    </ul>
+
+</div>
+
     </header>
 
     <!--Unique contents of page-->
@@ -565,7 +615,7 @@
 
 <!-- =========  Modal Form =========  -->
 
-<!-- <div class="backdrop is-hidden" data-modal></div>
+<div class="backdrop is-hidden" data-modal></div>
 
         <div class="modal">
             <h2 class="modal-title">Оставьте свои данные, мы вам перезвоним</h2>
@@ -621,11 +671,11 @@
 
         </div>
 
-    </div> -->
+    </div>
 
 
-<!-- 
+
 <script src="./js/modal.js"></script>
-<script src="./js/mobile-menu.js"></script> -->
+<script src="./js/mobile-menu.js"></script>
 </body>
 </html>
