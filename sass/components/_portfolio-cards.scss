@@ -1,37 +1,17 @@
-@media screen and (max-width: 767px) {
-  .portfolio {
-    
-      &-list {
-      
-            &-item:not(:last-child) {
-            
+// @media screen and (max-width: 767px) {
+.portfolio {
+
+&-list {
+  &-item:not(:last-child) {
     margin-bottom: 30px;
-            
-                    }
-      
-              }
-            }   
+  }
 }
+}   
+// }
 
 
 .portfolio {
 
-  &-list {
-   
-  display: flex;
-  flex-wrap: wrap;
-
-  margin-top: calc(-1 * var(--card-set-gap));
-  margin-left: calc(-1 * var(--card-set-gap));
-      
-            &-item {
-        flex-basis: calc(100% / 2 - var(--card-set-gap));
-
-        margin-left: var(--card-set-gap);
-        margin-top: var(--card-set-gap);
-                }
-  
-          }
 
   &-card-box {
     background: var(--primary-bg-color);
@@ -72,7 +52,29 @@
 }
 
 @media screen and (min-width: 768px) {
+
+
+  .portfolio {
+
+    &-list {
+     
+    display: flex;
+    flex-wrap: wrap;
   
+    margin-top: calc(-1 * var(--card-set-gap));
+    margin-left: calc(-1 * var(--card-set-gap));
+        
+              &-item {
+                margin-bottom: 0;
+          flex-basis: calc(100% / 2 - var(--card-set-gap));
+  
+          margin-left: var(--card-set-gap);
+          margin-top: var(--card-set-gap);
+                  }
+    
+            }
+  }
+
 
   %df_aic {
     display: flex;

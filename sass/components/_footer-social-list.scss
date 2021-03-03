@@ -1,5 +1,6 @@
 .footer-social-list {
   @include d_flex(center);
+  
 }
 
 
@@ -36,8 +37,12 @@ transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 fill: currentColor;
 }
 
-// @media screen and (min-width: 768px) {
-  // .footer-social-list {
-  //     @include d_flex(space-between);
-  //   }
-// }
+@media screen and (min-width: 768px) and (max-width: 1199px){
+  .footer-social {
+    margin-right: calc((89 - 15)*1px);
+    // align-self: flex-end;
+
+      // @include d_flex(space-between);
+      // margin-right: 0;
+    }
+}

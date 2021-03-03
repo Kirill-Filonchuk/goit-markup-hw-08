@@ -95,7 +95,7 @@
   .form-footer {
     display: block;
     margin-left: calc( (100% - 450px) * 1.092/2.092);
-    margin-left: calc( (100% - 450px) /2.092);
+    margin-right: calc( (100% - 450px) /2.092);
 
     .text {
       display: block;

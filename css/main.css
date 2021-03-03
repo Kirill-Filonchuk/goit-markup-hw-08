@@ -364,8 +364,6 @@ button {
 @media screen and (min-width: 768px) {
   .logo {
     margin-right: 88px;
-    margin-top: 26px;
-    margin-bottom: 26px;
   }
 }
 
@@ -1265,8 +1263,10 @@ button {
 }
 
 .team-member-box {
-  padding-bottom: 24px;
-  padding-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px 0 24px 0;
 }
 
 .team-list-title {
@@ -1301,10 +1301,6 @@ button {
 }
 
 @media screen and (min-width: 768px) {
-  .team-member-box {
-    padding-right: 74px;
-    padding-left: 74px;
-  }
   .team-list {
     display: flex;
     flex-wrap: wrap;
@@ -1335,10 +1331,7 @@ button {
     margin-bottom: 50px;
   }
   .team-member-box {
-    padding-right: 32px;
-    padding-left: 32px;
-    padding-bottom: 30px;
-    padding-top: 30px;
+    padding: 30px 32px;
   }
 }
 
@@ -1463,6 +1456,12 @@ button {
   fill: currentColor;
 }
 
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .footer-social {
+    margin-right: calc((89 - 15)*1px);
+  }
+}
+
 @media screen and (max-width: 767px) {
   .footer {
     padding-top: 60px;
@@ -1487,12 +1486,11 @@ button {
   .footer .container {
     padding-top: 60px;
     padding-bottom: 60px;
-    padding-left: 76px;
-    padding-right: 89px;
+    flex-grow: 0;
   }
   .footer-logo-adress {
     text-align: center;
-    margin-left: 0;
+    margin-left: calc((76 - 15) * 1px);
     margin-right: 165px;
     width: 232px;
   }
@@ -1501,15 +1499,17 @@ button {
     margin-right: 0 auto;
   }
   .footer-section {
-    text-align: center;
     display: flex;
+    justify-content: space-between;
     flex-wrap: wrap;
     align-items: baseline;
+    text-align: center;
   }
 }
 
 @media screen and (min-width: 1200px) {
   .footer {
+    display: flex;
     padding-top: 56px;
     padding-bottom: 55px;
     background-color: var(--footer-bg-color);
@@ -1777,7 +1777,7 @@ button {
   .form-footer {
     display: block;
     margin-left: calc( (100% - 450px) * 1.092/2.092);
-    margin-left: calc( (100% - 450px) /2.092);
+    margin-right: calc( (100% - 450px) /2.092);
   }
   .form-footer .text {
     display: block;

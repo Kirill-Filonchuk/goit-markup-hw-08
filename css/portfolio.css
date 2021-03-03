@@ -349,8 +349,6 @@ button {
 @media screen and (min-width: 768px) {
   .logo {
     margin-right: 88px;
-    margin-top: 26px;
-    margin-bottom: 26px;
   }
 }
 
@@ -543,6 +541,12 @@ button {
   fill: currentColor;
 }
 
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .footer-social {
+    margin-right: calc((89 - 15)*1px);
+  }
+}
+
 @media screen and (max-width: 767px) {
   .footer {
     padding-top: 60px;
@@ -567,12 +571,11 @@ button {
   .footer .container {
     padding-top: 60px;
     padding-bottom: 60px;
-    padding-left: 76px;
-    padding-right: 89px;
+    flex-grow: 0;
   }
   .footer-logo-adress {
     text-align: center;
-    margin-left: 0;
+    margin-left: calc((76 - 15) * 1px);
     margin-right: 165px;
     width: 232px;
   }
@@ -581,15 +584,17 @@ button {
     margin-right: 0 auto;
   }
   .footer-section {
-    text-align: center;
     display: flex;
+    justify-content: space-between;
     flex-wrap: wrap;
     align-items: baseline;
+    text-align: center;
   }
 }
 
 @media screen and (min-width: 1200px) {
   .footer {
+    display: flex;
     padding-top: 56px;
     padding-bottom: 55px;
     background-color: var(--footer-bg-color);
@@ -857,7 +862,7 @@ button {
   .form-footer {
     display: block;
     margin-left: calc( (100% - 450px) * 1.092/2.092);
-    margin-left: calc( (100% - 450px) /2.092);
+    margin-right: calc( (100% - 450px) /2.092);
   }
   .form-footer .text {
     display: block;
@@ -1051,23 +1056,8 @@ button {
   }
 }
 
-@media screen and (max-width: 767px) {
-  .portfolio-list-item:not(:last-child) {
-    margin-bottom: 30px;
-  }
-}
-
-.portfolio-list {
-  display: flex;
-  flex-wrap: wrap;
-  margin-top: calc(-1 * var(--card-set-gap));
-  margin-left: calc(-1 * var(--card-set-gap));
-}
-
-.portfolio-list-item {
-  flex-basis: calc(100% / 2 - var(--card-set-gap));
-  margin-left: var(--card-set-gap);
-  margin-top: var(--card-set-gap);
+.portfolio-list-item:not(:last-child) {
+  margin-bottom: 30px;
 }
 
 .portfolio-card-box {
@@ -1101,6 +1091,18 @@ button {
 }
 
 @media screen and (min-width: 768px) {
+  .portfolio-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: calc(-1 * var(--card-set-gap));
+    margin-left: calc(-1 * var(--card-set-gap));
+  }
+  .portfolio-list-item {
+    margin-bottom: 0;
+    flex-basis: calc(100% / 2 - var(--card-set-gap));
+    margin-left: var(--card-set-gap);
+    margin-top: var(--card-set-gap);
+  }
   .tekhn-box {
     padding-bottom: 56px;
   }
