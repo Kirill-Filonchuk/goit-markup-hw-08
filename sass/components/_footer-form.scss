@@ -239,9 +239,7 @@
     &::placeholder {
       font-weight: 400;
       @include line-height-calc(16,20);
-      // font-size: 16px;
-      // line-height: 1.25;
-    
+        
       letter-spacing: 0.03em;
     
       color: var(--footer-rare-text-color);
@@ -257,8 +255,6 @@
     padding: 10px 28px 10px 29px;
   
     @include w-h(200,50);
-    // width: 200px;
-    // height: 50px;
   
     background-color: var(--accent-color);
   
@@ -283,23 +279,3 @@
     fill: var(--primary-bg-color);
   }
 }
-
-// .form-footer {
-//     display: flex;
-//     flex-direction: column;
-  
-//     margin-left: 93px;
-
-//     .text {
-//       font-weight: 700;
-//       @include line-height-calc(14,16);
-      
-//       letter-spacing: 0.03em;
-//       text-transform: uppercase;
-    
-//       color: var(--primary-bg-color);
-    
-//       margin-bottom: 20px;
-//     }
-  
-//   }
