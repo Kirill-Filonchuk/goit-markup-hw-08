@@ -224,6 +224,7 @@ button {
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   padding: 40px 48px;
   background-color: var(--primary-bg-color);
+  z-index: 99;
 }
 
 .mobile__menu.is-open {
@@ -234,23 +235,27 @@ button {
   position: absolute;
   top: 10px;
   right: 15px;
+  display: flex;
+  align-items: center;
   background-color: transparent;
   border: none;
   padding: 0;
+  color: var(--header-logo-studio-color);
 }
 
-a:visited {
-  text-decoration: none;
-}
-
-.nav__link {
-  text-decoration: none;
+.mobile__close__btn:focus {
+  color: var(--accent-color);
 }
 
 .menu__close__btn__icon {
   width: 40px;
   height: 40px;
   fill: currentColor;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.menu__close__btn__icon:focus {
+  fill: var(--accent-color);
 }
 
 .mobile__menu__item, .nav__item {
@@ -272,6 +277,10 @@ a:visited {
 
 .nav__item:not(:last-child) {
   margin-bottom: 32px;
+}
+
+.nav__link {
+  text-decoration: none;
 }
 
 .mobile__menu__contact {
@@ -653,22 +662,6 @@ a:visited {
 }
 
 /* END Modal BTN  */
-@media screen and (max-width: 767px) {
-  .modal {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) scale(1);
-    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    max-width: 320px;
-    max-height: 70vh;
-    padding: 40px;
-    background-color: var(--primary-bg-color);
-    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-    border-radius: 4px;
-  }
-}
-
 .backdrop {
   position: fixed;
   top: 0;
@@ -693,11 +686,11 @@ a:visited {
 .modal {
   position: absolute;
   top: 50%;
-  left: 50%;
+  left: 50vw;
   transform: translate(-50%, -50%) scale(1);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  min-width: 528px;
-  min-height: 581px;
+  max-width: 450px;
+  height: 609px;
   padding: 40px;
   background-color: var(--primary-bg-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -726,6 +719,22 @@ a:visited {
 
 .modal-button-icon:hover, .modal-button-icon:focus {
   fill: var(--accent-color);
+}
+
+@media screen and (min-width: 1200px) {
+  .modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    min-width: 528px;
+    min-height: 581px;
+    padding: 40px;
+    background-color: var(--primary-bg-color);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+  }
 }
 
 .social-list {
@@ -773,10 +782,13 @@ a:visited {
 
 .modal-title {
   display: block;
+  margin: 0 auto;
+  width: 370px;
+  height: 60px;
   margin-bottom: 12px;
   font-weight: 700;
   font-size: 20px;
-  line-height: 1.15;
+  line-height: 1.5;
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--second-text-color);
@@ -805,7 +817,7 @@ a:visited {
 
 .modal-name-input {
   display: block;
-  width: 448px;
+  width: 370px;
   height: 40px;
   padding-left: 42px;
   font-weight: 400;
@@ -855,7 +867,7 @@ a:visited {
 
 .modal-tel-input {
   display: block;
-  width: 448px;
+  width: 370px;
   height: 40px;
   padding-left: 42px;
   font-weight: 400;
@@ -905,7 +917,7 @@ a:visited {
 
 .modal-mail-input {
   display: block;
-  width: 448px;
+  width: 370px;
   height: 40px;
   padding-left: 42px;
   font-weight: 400;
@@ -954,7 +966,7 @@ a:visited {
 
 .modal-comment-text {
   display: block;
-  width: 448px;
+  width: 370px;
   height: 120px;
   margin-top: 4px;
   padding: 12px 16px;
@@ -1000,8 +1012,8 @@ a:visited {
   align-items: center;
   flex-wrap: wrap;
   font-weight: 400;
-  font-size: 14px;
-  line-height: 1.715;
+  font-size: 12px;
+  line-height: 1.167;
   letter-spacing: 0.03em;
   color: var(--primary-text-color);
   margin-bottom: 30px;
@@ -1049,6 +1061,36 @@ a:visited {
 .modal-form-btn:hover, .modal-form-btn:focus {
   background-color: var(--button-hover-hero-bg-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
+
+@media screen and (min-width: 1200px) {
+  .modal-title {
+    display: block;
+    width: 448px;
+    height: 23px;
+    font-size: 20px;
+    line-height: 1.15;
+  }
+  .modal-name-input {
+    width: 448px;
+    height: 40px;
+  }
+  .modal-tel-input {
+    width: 448px;
+    height: 40px;
+  }
+  .modal-mail-input {
+    width: 448px;
+    height: 40px;
+  }
+  .modal-comment-text {
+    width: 448px;
+    height: 120px;
+  }
+  .modal-check-policy {
+    font-size: 14px;
+    line-height: 1.715;
+  }
 }
 
 /*  ========= Particularities  =========  */
