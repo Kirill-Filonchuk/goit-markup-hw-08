@@ -1297,8 +1297,10 @@ button {
     max-width: 370px;
     width: 100%;
   }
-  .modal-check-policy {
+  .modal-check-policy,
+  .agreement-policy {
     font-size: 10px;
+    line-height: 1.2;
   }
 }
 
@@ -1322,11 +1324,6 @@ button {
   .modal-comment-text {
     width: 370px;
     height: 120px;
-  }
-  .modal-check-policy,
-  .agreement-policy {
-    font-size: 10px;
-    line-height: 1.2;
   }
 }
 

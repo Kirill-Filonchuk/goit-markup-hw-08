@@ -518,8 +518,9 @@
   max-width: 370px;
   width: 100%;
   }
-  .modal-check-policy {
-    font-size: 10px;
+  .modal-check-policy,
+  .agreement-policy {
+    @include line-height-calc(10,12);
   }
 }
 
@@ -542,10 +543,7 @@
     @include w-h(370,120);
     
   }
-  .modal-check-policy,
-  .agreement-policy {
-    @include line-height-calc(10,12);
-  }
+
 }  
 
 
