@@ -159,8 +159,8 @@ button {
 }
 
 .container {
-  width: 100%;
   padding: 0 15px;
+  margin: 0 auto;
 }
 
 .header .container {
@@ -205,10 +205,8 @@ button {
 
 .mobile__menu {
   position: absolute;
-  width: 101vw;
-  max-width: 480px;
+  width: 100vw;
   height: 100vh;
-  min-height: 500px;
   overflow-y: scroll;
   top: 0;
   left: 50%;
@@ -231,11 +229,15 @@ button {
   padding: 40px 48px;
   background-color: var(--primary-bg-color);
   z-index: 2;
+  opacity: 0;
+  visibility: hidden;
 }
 
 .mobile__menu.is-open {
   -webkit-transform: translateX(-50%) translateY(0) scale(1);
           transform: translateX(-50%) translateY(0) scale(1);
+  opacity: 1;
+  visibility: visible;
 }
 
 .mobile__close__btn {
@@ -268,6 +270,10 @@ button {
 
 .menu__close__btn__icon:focus {
   fill: var(--accent-color);
+}
+
+.mobile__menu__nav {
+  margin-bottom: 64px;
 }
 
 .mobile__menu__item, .nav__item {

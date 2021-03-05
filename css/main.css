@@ -179,8 +179,8 @@ button {
 }
 
 .container {
-  width: 100%;
   padding: 0 15px;
+  margin: 0 auto;
 }
 
 .header .container {
@@ -225,10 +225,8 @@ button {
 
 .mobile__menu {
   position: absolute;
-  width: 101vw;
-  max-width: 480px;
+  width: 100vw;
   height: 100vh;
-  min-height: 500px;
   overflow-y: scroll;
   top: 0;
   left: 50%;
@@ -251,11 +249,15 @@ button {
   padding: 40px 48px;
   background-color: var(--primary-bg-color);
   z-index: 2;
+  opacity: 0;
+  visibility: hidden;
 }
 
 .mobile__menu.is-open {
   -webkit-transform: translateX(-50%) translateY(0) scale(1);
           transform: translateX(-50%) translateY(0) scale(1);
+  opacity: 1;
+  visibility: visible;
 }
 
 .mobile__close__btn {
@@ -288,6 +290,10 @@ button {
 
 .menu__close__btn__icon:focus {
   fill: var(--accent-color);
+}
+
+.mobile__menu__nav {
+  margin-bottom: 64px;
 }
 
 .mobile__menu__item, .nav__item {
@@ -1473,7 +1479,7 @@ button {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 30px 0 24px 0;
+  padding: 30px 122px 24px 122px;
 }
 
 .team-list-title {
@@ -1509,6 +1515,9 @@ button {
 }
 
 @media screen and (min-width: 768px) {
+  .team-member-box {
+    padding: 30px 74px 24px 74px;
+  }
   .team-list {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1601,14 +1610,14 @@ button {
             justify-content: center;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    margin-right: calc(-1 * var(--card-set-gap));
+    margin-right: -30px;
     margin-bottom: calc(-1 * var(--card-set-gap));
   }
   .customers-order-item {
-    width: calc(100% / 2 - var(--card-set-gap));
     height: 90px;
-    margin-right: var(--card-set-gap);
+    margin-right: 30px;
     margin-bottom: var(--card-set-gap);
+    width: calc((100% - 2 * 30px) / 2);
   }
 }
 

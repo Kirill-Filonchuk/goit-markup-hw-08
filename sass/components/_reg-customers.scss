@@ -44,26 +44,38 @@
   
   .customer-icon {
     fill: currentColor;
+
+    // .brand {
+    //   widht: 59px;
+    //   height:46px;
+    // }
+
   }
 
   @media screen and  (max-width: 767px) {
-  
+    // .customers .container {
+    //   margin-right: -30px;
+    // }
+
     .customers-order {
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
-      margin-right: calc(-1 * var(--card-set-gap));
+      margin-right: -30px;
       margin-bottom: calc(-1 * var(--card-set-gap));
+      
   
       &-item {
        
-       width: calc(100% / 2 - var(--card-set-gap));
+      //  width: calc(100% / 2 - var(--card-set-gap));
       //  width: 210px;
         height: 90px;
-        margin-right: var(--card-set-gap);
+        margin-right: 30px;
+        
         margin-bottom: var(--card-set-gap);
         
-        // flex-basis: calc(100% / 2 - var(--card-set-gap));
+        // flex-basis: calc(100% / 2 - 2* var(--card-set-gap));
+        width: calc((100% - 2 * 30px) / 2);
       }
   
     }
